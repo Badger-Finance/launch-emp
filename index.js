@@ -37,19 +37,19 @@ if (argv.gasprice < 1 || argv.gasprice > 1000) throw "--gasprice must be between
 
   // Example EMP Parameters. Customize these.
   const empParams = {
-    expirationTimestamp: "1640995200", // 01/01/2022 @ 0:00 (UTC)
-    collateralAddress: "0xd0a1e359811322d97991e03f863a0c30c2cf029c", // Kovan WETH address. Mainnet WETH is: 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.
-    priceFeedIdentifier: padRight(utf8ToHex("USDETH"), 64), // Using the USDETH price.
-    syntheticName: "uUSDwETH Synthetic Token Expiring 1 January 2022", // Long name.
-    syntheticSymbol: "uUSDwETH-JAN", // Short name.
-    collateralRequirement: { rawValue: toWei("1.25") }, // 125% collateral req.
+    expirationTimestamp: "1618027000",
+    collateralAddress: "0x758A43EE2BFf8230eeb784879CdcFF4828F2544D", // bwBTC/ETH SLP
+    priceFeedIdentifier: padRight(utf8ToHex("USD-[bwBTC/ETH SLP]"), 64),
+    syntheticName: "sCLAW Synthetic Token Expiring 2 February 2021", // Long name.
+    syntheticSymbol: "sCLAW-JAN", // Short name.
+    collateralRequirement: { rawValue: toWei("1.20") }, // 120% collateral req.
     disputeBondPct: { rawValue: toWei("0.1") }, // 10% dispute bond.
-    sponsorDisputeRewardPct: { rawValue: toWei("0.05") }, // 5% reward for sponsors who are disputed invalidly
-    disputerDisputeRewardPct: { rawValue: toWei("0.2") }, // 20% reward for correct disputes.
+    sponsorDisputeRewardPct: { rawValue: toWei("0.1") }, // 10% reward for sponsors who are disputed invalidly
+    disputerDisputeRewardPct: { rawValue: toWei("0.1") }, // 10% reward for correct disputes.
     minSponsorTokens: { rawValue: toWei("100") }, // Min sponsor position size of 100 synthetic tokens.
     liquidationLiveness: 7200, // 2 hour liquidation liveness.
     withdrawalLiveness: 7200, // 2 hour withdrawal liveness.
-    excessTokenBeneficiary:  getAddress("Store", networkId), // UMA Store contract.
+    excessTokenBeneficiary:  "0x54f44eA3D2e7aA0ac089c4d8F7C93C27844057BF", // UMA Store contract.
   };
 
   const empCreator = new web3.eth.Contract(
