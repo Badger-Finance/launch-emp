@@ -40,8 +40,8 @@ if (argv.gasprice < 1 || argv.gasprice > 1000) throw "--gasprice must be between
     expirationTimestamp: "1618027000",
     collateralAddress: "0x758A43EE2BFf8230eeb784879CdcFF4828F2544D", // bwBTC/ETH SLP
     priceFeedIdentifier: padRight(utf8ToHex("USD-[bwBTC/ETH SLP]"), 64),
-    syntheticName: "sCLAW Synthetic Token Expiring 2 February 2021", // Long name.
-    syntheticSymbol: "sCLAW-JAN", // Short name.
+    syntheticName: "sCLAW Synthetic Token Expiring 10 April 2021", // Long name.
+    syntheticSymbol: "sCLAW-APRIL", // Short name.
     collateralRequirement: { rawValue: toWei("1.20") }, // 120% collateral req.
     disputeBondPct: { rawValue: toWei("0.1") }, // 10% dispute bond.
     sponsorDisputeRewardPct: { rawValue: toWei("0.1") }, // 10% reward for sponsors who are disputed invalidly
